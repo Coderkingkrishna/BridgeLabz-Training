@@ -80,3 +80,48 @@ Each program helps in understanding:
 Day 01 helped in building a strong base for C# programming by combining **hands-on coding** with **important theoretical concepts**, setting the stage for advanced topics in upcoming days.
 
 ---
+
+# Day 02 – C# Operators & Data Types
+
+## Overview
+Day 02 focused on understanding **C# data types**, **operators**, and the purpose of the `static void Main` method, which serves as the entry point of a C# application.
+
+---
+
+## Concepts Covered
+- **Data Types**
+  - Value types and reference types
+  - Common built-in data types (int, float, double, char, bool, string)
+
+- **Operators**
+  - Arithmetic operators
+  - Relational operators
+  - Logical operators
+  - Assignment operators
+
+- **static void Main**
+  - Entry point of a C# program
+  - `static` allows execution without creating an object
+  - `void` indicates no return value
+  - `Main` is invoked by the CLR at runtime
+
+---
+
+## Tools & Technologies
+- Language: C#  
+- Framework: .NET  
+- Environment: Visual Studio / `csc`
+
+---
+
+## Learning Outcomes
+- Gained understanding of C# data types and operators
+- Learned how expressions are evaluated
+- Understood the role of `static void Main` in program execution
+
+---
+
+## Conclusion
+Day 02 strengthened core C# fundamentals by explaining how data is stored, manipulated, and how program execution begins.
+
+---
