@@ -7,6 +7,6 @@ class Sum{
 			return;
 		}
 		int Result = (Number * (Number + 1))/2;
-		Console.WriteLine("The Sum of "+Number+"natural numbers is "+Result);
+		Console.WriteLine("The Sum of "+Number+" natural numbers is "+Result);
 	}
 }
