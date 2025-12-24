@@ -216,3 +216,78 @@ Each program demonstrates:
 Day 03 enhanced understanding of control flow in C# by implementing a variety of programs that utilize conditional statements and loops, preparing for more complex programming challenges in upcoming days.
 
 ---
+
+# Day 04 – Arrays in C#
+
+## 📌 Overview
+This day focuses on understanding **arrays** in C#, including single-dimensional arrays, multi-dimensional arrays, array operations, and their applications in solving real-world problems.
+
+---
+
+## 🧪 Programs Implemented
+The following C# programs were implemented across two levels to understand array concepts:
+
+### Level 1: Basic Arrays
+1. **Array Age** - Stores and displays ages of multiple persons using an array.
+2. **Array Check Number** - Checks if a number exists in an array.
+3. **Array Table** - Generates multiplication table for a number using an array.
+4. **Average of Heights** - Calculates average height from an array of heights.
+5. **FizzBuzz Array** - Implements FizzBuzz logic and stores results in an array.
+6. **Odd Even Array** - Separates odd and even numbers from an array.
+7. **Store Values** - Demonstrates storing and retrieving values from an array.
+8. **Table Six to Nine** - Generates multiplication tables for numbers 6 to 9 using arrays.
+9. **2D to 1D Array** - Converts a 2D array to a 1D array.
+
+### Level 2: Advanced Arrays
+1. **Frequency** - Counts frequency of each element in an array.
+2. **Grade Calculation** - Calculates grades based on marks stored in arrays.
+3. **Max Elements** - Finds maximum elements in an array.
+4. **Max Elements with Loop** - Finds maximum elements using loops.
+5. **Multi Persons BMI** - Calculates BMI for multiple persons using arrays.
+6. **Persons BMI** - Calculates BMI for persons and stores in arrays.
+7. **Reverse Number** - Reverses the digits of a number using arrays.
+8. **Salary Calculation** - Calculates salaries and bonuses using arrays.
+
+Each program demonstrates:
+- Declaration and initialization of arrays
+- Accessing array elements
+- Array traversal using loops
+- Multi-dimensional arrays
+- Array operations (search, sort, manipulate)
+- Real-world applications of arrays
+
+---
+
+## 📘 Theoretical Concepts Learned
+
+### 🔹 Arrays in C#
+- **Single-dimensional Arrays**: Fixed-size collection of elements of the same type.
+- **Multi-dimensional Arrays**: Arrays with multiple dimensions (2D, 3D, etc.).
+- **Jagged Arrays**: Arrays of arrays with different sizes.
+
+### 🔹 Array Operations
+- **Declaration**: `int[] arr;`
+- **Initialization**: `int[] arr = new int[5];`
+- **Accessing Elements**: `arr[0]`
+- **Length**: `arr.Length`
+
+### 🔹 Array Methods
+- **Sort()**: Sorts array elements
+- **Reverse()**: Reverses array elements
+- **Copy()**: Copies elements from one array to another
+
+---
+
+## 🎯 Key Takeaways
+- Learned to declare, initialize, and manipulate arrays
+- Understood single and multi-dimensional arrays
+- Gained experience in array traversal and operations
+- Applied arrays in solving practical problems
+- Learned memory management for arrays
+
+---
+
+## ✅ Conclusion
+Day 04 built a solid foundation in array handling in C# by implementing programs that cover basic to advanced array operations, setting the stage for data structures and algorithms in upcoming days.
+
+---
