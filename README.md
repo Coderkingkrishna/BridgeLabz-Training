@@ -291,3 +291,100 @@ Each program demonstrates:
 Day 04 built a solid foundation in array handling in C# by implementing programs that cover basic to advanced array operations, setting the stage for data structures and algorithms in upcoming days.
 
 ---
+
+# Day 05 – Methods in C#
+
+## 📌 Overview
+This day focuses on understanding **methods** in C#, including method declaration, parameters, return types, method overloading, and recursion, along with their applications in modular programming.
+
+---
+
+## 🧪 Programs Implemented
+The following C# programs were implemented across three levels to understand method concepts:
+
+### Level 1: Basic Methods
+1. **Athlete** - Calculates athlete performance metrics using methods.
+2. **Calculate Trigonometric Functions** - Computes trigonometric values using methods.
+3. **Chocolate Distribution** - Distributes chocolates using method-based calculations.
+4. **Combination of Handshake** - Calculates handshake combinations with methods.
+5. **Number Check** - Checks number properties using methods.
+6. **Number of Handshake** - Calculates handshake possibilities with methods.
+7. **Quotient and Remainder** - Computes quotient and remainder using methods.
+8. **Simple Interest Function** - Calculates simple interest using methods.
+9. **Smallest and Largest** - Finds smallest and largest numbers using methods.
+10. **Spring Season** - Checks spring season using methods.
+11. **Sum of Loop** - Calculates sum using loop-based methods.
+12. **Wind Chill** - Calculates wind chill factor using methods.
+
+### Level 2: Intermediate Methods
+1. **BMI Calculator** - Calculates BMI using methods with parameters.
+2. **Factors of Number** - Finds factors using method-based approach.
+3. **Info** - Displays information using methods.
+4. **Leap Year Check** - Checks leap year using methods.
+5. **Number Analysis** - Analyzes numbers using methods.
+6. **Quadratic** - Solves quadratic equations using methods.
+7. **Random Number Analysis** - Analyzes random numbers with methods.
+8. **Student Vote Checker** - Checks voting eligibility using methods.
+9. **Sum of Natural Numbers** - Calculates sum using recursive methods.
+10. **Unit Convert** - Performs unit conversions using methods.
+11. **Unit Converter** - Advanced unit conversion with methods.
+
+### Level 3: Advanced Methods
+1. **Collinear Points** - Checks if points are collinear using methods.
+2. **Employee Bonus** - Calculates employee bonuses using methods.
+3. **Football Team Height** - Analyzes team heights with methods.
+4. **Line and Distance** - Calculates line distances using methods.
+5. **Number Checker** - Advanced number checking with methods.
+6. **Number Checker 2** - Extended number checking functionality.
+7. **Number Checker 3** - Further number checking methods.
+8. **Number Checker 4** - Comprehensive number checking.
+9. **OTP Generator** - Generates OTP using methods.
+10. **Student Score Card** - Manages student scores with methods.
+
+Each program demonstrates:
+- Method declaration and definition
+- Parameter passing (value and reference)
+- Return types and void methods
+- Method overloading
+- Recursive methods
+- Modular code organization
+- Code reusability
+
+---
+
+## 📘 Theoretical Concepts Learned
+
+### 🔹 Methods in C#
+- **Method Declaration**: `returnType MethodName(parameters)`
+- **Parameters**: Value parameters, reference parameters, output parameters
+- **Return Types**: void, int, string, etc.
+- **Method Overloading**: Same name, different signatures
+- **Recursion**: Method calling itself
+
+### 🔹 Method Types
+- **Static Methods**: Called without object creation
+- **Instance Methods**: Called on object instances
+- **Void Methods**: No return value
+- **Parameterized Methods**: Accept input parameters
+
+### 🔹 Best Practices
+- Use meaningful method names
+- Keep methods focused on single responsibility
+- Use parameters for input, return for output
+- Document methods with comments
+
+---
+
+## 🎯 Key Takeaways
+- Learned to create and use methods for code organization
+- Understood parameter passing and return values
+- Gained experience in method overloading and recursion
+- Applied methods in solving complex problems
+- Learned modular programming principles
+
+---
+
+## ✅ Conclusion
+Day 05 enhanced understanding of methods in C# by implementing programs that demonstrate method declaration, parameters, return types, and recursion, preparing for object-oriented programming concepts in upcoming days.
+
+---
