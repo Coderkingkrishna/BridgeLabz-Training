@@ -388,3 +388,74 @@ Each program demonstrates:
 Day 05 enhanced understanding of methods in C# by implementing programs that demonstrate method declaration, parameters, return types, and recursion, preparing for object-oriented programming concepts in upcoming days.
 
 ---
+
+# Day 06 – C# Strings & Built-in Functions
+
+## Overview
+Day 06 focused on working with **C# string operations**, **exception handling basics**, and **built-in functions**, along with practical problem-solving using recursion and utility programs.
+
+---
+
+## Programs & Modules Implemented
+
+### 1. String Operations
+- String comparison
+- Convert to uppercase and lowercase
+- Substring creation
+- Splitting words
+- Character extraction
+
+### 2. Exception Handling Demonstrations
+- ArgumentOutOfRangeException
+- ArrayIndexOutOfRangeException
+- IndexOutOfRangeException
+- NullReferenceException
+- FormatException
+
+### 3. Date & Time Built-in Functions
+- Date formatting
+- Date comparison
+- Date arithmetic
+- Time zone handling
+
+### 4. Utility & Logic Programs
+- Basic Calculator
+- GCD and LCM Calculator
+- Factorial using Recursion
+- Fibonacci Series Generator
+- Prime Number Checker
+- Palindrome Checker
+- Maximum of Three Numbers
+- Number Guessing Game
+
+---
+
+## Concepts Covered
+- **String class and string manipulation**
+- **Common runtime exceptions**
+- **Built-in DateTime functions**
+- **Recursion fundamentals**
+- **Modular and reusable methods**
+
+---
+
+## Tools & Technologies
+- Language: C#
+- Framework: .NET
+- Environment: Visual Studio / `csc`
+- Version Control: Git & GitHub
+
+---
+
+## Learning Outcomes
+- Gained hands-on experience with C# strings and exceptions
+- Learned to use built-in date and time utilities
+- Strengthened logic building using recursion
+- Improved debugging and error-handling understanding
+
+---
+
+## Conclusion
+Day 06 enhanced practical C# skills by combining string processing, exception handling, and built-in functions, preparing for more advanced object-oriented and real-world applications.
+
+---
