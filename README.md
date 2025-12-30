@@ -388,74 +388,313 @@ Each program demonstrates:
 Day 05 enhanced understanding of methods in C# by implementing programs that demonstrate method declaration, parameters, return types, and recursion, preparing for object-oriented programming concepts in upcoming days.
 
 ---
+# 📅 Day 06 – C# Strings & Built-in Functions
 
-# Day 06 – C# Strings & Built-in Functions
-
-## Overview
-Day 06 focused on working with **C# string operations**, **exception handling basics**, and **built-in functions**, along with practical problem-solving using recursion and utility programs.
-
----
-
-## Programs & Modules Implemented
-
-### 1. String Operations
-- String comparison
-- Convert to uppercase and lowercase
-- Substring creation
-- Splitting words
-- Character extraction
-
-### 2. Exception Handling Demonstrations
-- ArgumentOutOfRangeException
-- ArrayIndexOutOfRangeException
-- IndexOutOfRangeException
-- NullReferenceException
-- FormatException
-
-### 3. Date & Time Built-in Functions
-- Date formatting
-- Date comparison
-- Date arithmetic
-- Time zone handling
-
-### 4. Utility & Logic Programs
-- Basic Calculator
-- GCD and LCM Calculator
-- Factorial using Recursion
-- Fibonacci Series Generator
-- Prime Number Checker
-- Palindrome Checker
-- Maximum of Three Numbers
-- Number Guessing Game
+## 📌 Overview
+Day 06 focused on working with **C# string operations**, **exception handling basics**, and **built-in functions**, along with practical problem-solving using recursion and utility-based programs.  
+This day strengthened understanding of string manipulation, error handling, and reusable logic development.
 
 ---
 
-## Concepts Covered
-- **String class and string manipulation**
-- **Common runtime exceptions**
-- **Built-in DateTime functions**
-- **Recursion fundamentals**
-- **Modular and reusable methods**
+## 🧪 Programs & Modules Implemented
+
+### 🔹 1. String Operations
+- String comparison  
+- Convert string to uppercase and lowercase  
+- Substring creation  
+- Splitting words from a string  
+- Character extraction from strings  
 
 ---
 
-## Tools & Technologies
-- Language: C#
-- Framework: .NET
-- Environment: Visual Studio / `csc`
-- Version Control: Git & GitHub
+### 🔹 2. Exception Handling Demonstrations
+The following runtime exceptions were demonstrated with examples:
+- `ArgumentOutOfRangeException`
+- `ArrayIndexOutOfRangeException`
+- `IndexOutOfRangeException`
+- `NullReferenceException`
+- `FormatException`
 
 ---
 
-## Learning Outcomes
-- Gained hands-on experience with C# strings and exceptions
-- Learned to use built-in date and time utilities
-- Strengthened logic building using recursion
-- Improved debugging and error-handling understanding
+### 🔹 3. Date & Time Built-in Functions
+- Date formatting  
+- Date comparison  
+- Date arithmetic (add / subtract days, months, years)  
+- Time zone handling  
 
 ---
 
-## Conclusion
-Day 06 enhanced practical C# skills by combining string processing, exception handling, and built-in functions, preparing for more advanced object-oriented and real-world applications.
+### 🔹 4. Utility & Logic Programs
+- Basic Calculator  
+- GCD and LCM Calculator  
+- Factorial using Recursion  
+- Fibonacci Series Generator  
+- Prime Number Checker  
+- Palindrome Checker  
+- Maximum of Three Numbers  
+- Number Guessing Game  
+
+---
+
+## 📘 Concepts Covered
+- `String` class and string manipulation methods  
+- Common runtime exceptions in C#  
+- Built-in `DateTime` functions  
+- Recursion fundamentals  
+- Modular and reusable method design  
+
+---
+
+## 🛠️ Tools & Technologies
+- **Language:** C#  
+- **Framework:** .NET  
+- **Environment:** Visual Studio / `csc` Compiler  
+- **Version Control:** Git & GitHub  
+
+---
+
+## 🎯 Learning Outcomes
+- Gained hands-on experience with C# string operations  
+- Learned how to handle and debug common runtime exceptions  
+- Used built-in date and time utilities effectively  
+- Strengthened logical thinking using recursion  
+- Improved understanding of modular programming  
+
+---
+
+## ✅ Conclusion
+Day 06 enhanced practical **C# programming skills** by combining string processing, exception handling, and built-in functions.  
+This day prepared a strong base for upcoming **advanced object-oriented and real-world applications**.
+
+---
+
+# 📅 Day 07 – Scenario Based Problem Solving in C#
+
+## 📌 Overview
+Day 07 focuses on **scenario-based problem solving** using core **C# fundamentals**.  
+The problems are designed to simulate **real-world applications** and strengthen logical thinking, modular programming, and clean coding practices using arrays, strings, loops, conditions, and methods.
+
+---
+
+## 🧪 Scenarios & Programs Implemented
+
+---
+
+## 🎲 1. Snake & Ladder Game (Multi-Player | .NET 6+)
+
+### 🎯 Objective
+Build a **console-based Snake & Ladder game** using **.NET 6 or above**, applying fundamental C# concepts such as variables, conditions, loops, collections, and methods.  
+The project follows proper programming hygiene and uses **Git/GitHub** for version control.
+
+---
+
+### 🕹️ Game Description
+- Board contains **100 cells (1–100)**
+- Fixed set of **snakes and ladders**
+- Players start at **position 0**
+- Dice generates a random number between **1 and 6**
+- Player must reach **exactly 100** to win
+- If dice roll exceeds 100 → **turn is skipped**
+
+---
+
+### 👥 Multi-Player Rules
+- Supports **minimum 2** and **maximum 4 players**
+- Players take turns in sequence
+- Landing on:
+  - 🪜 **Ladder** → moves player upward
+  - 🐍 **Snake** → slides player downward
+- Each turn displays:
+  - Player name
+  - Dice value
+  - Old position → New position
+  - Snake / Ladder message (if applicable)
+
+---
+
+### ⚙️ Technical Requirements
+
+#### ✔ .NET Fundamentals Used
+- **Variables & Data Types**  
+  (`int`, `string`, `bool`, etc.)
+
+- **Operators**  
+  Arithmetic, Assignment, Comparison, Logical
+
+- **Logical Constructs**
+  - `if–else`
+  - `switch`
+  - Ternary operator `(?:)` *(used at least once)*
+
+- **Loops**
+  - `for`
+  - `while`
+  - `do-while`
+  - `foreach`  
+  *(At least two types implemented)*
+
+- **Jump Statements**
+  - `break`
+  - `continue`
+
+---
+
+### 🔧 Modular Functions Implemented
+- `RollDice()`
+- `MovePlayer()`
+- `ApplySnakeOrLadder()`
+
+---
+
+## 🌡️ 2. Arrays – Temperature Analyzer
+
+### 🧠 Scenario
+You are analyzing a **week’s worth of hourly temperature data**, stored in a **2D array**:
+
+
+Each row represents a day and each column represents hourly temperature data.
+
+---
+
+### 📌 Problem Requirements
+Create methods to:
+- Find the **hottest day**
+- Find the **coldest day**
+- Calculate and return **average temperature for each day**
+
+---
+
+### 💡 Concepts Applied
+- 2D Arrays
+- Nested loops
+- Method-based computation
+- Aggregation logic
+
+---
+
+## ✍️ 3. Strings – Sentence Formatter
+
+### 🧠 Scenario
+A text editing tool receives **poorly formatted input** from users.  
+Your task is to automatically correct the formatting.
+
+---
+
+### 📌 Problem Requirements
+Write a method that takes a **paragraph as input** and returns a corrected version with:
+- ✔ Exactly **one space after punctuation**
+- ✔ **Capital letter** after `.`, `?`, `!`
+- ✔ **Trimmed extra spaces**
+
+---
+
+### 💡 Concepts Applied
+- `String` class methods
+- Character manipulation
+- Loop-based parsing
+- String formatting logic
+
+---
+
+## 📘 Key Concepts Covered
+- Scenario-based problem solving
+- Arrays and 2D arrays
+- String manipulation techniques
+- Game logic implementation
+- Conditional statements and loops
+- Modular programming with methods
+- Clean and readable console output
+
+---
+
+## 🛠️ Tools & Technologies
+- **Language:** C#
+- **Framework:** .NET 6+
+- **Environment:** Visual Studio / `dotnet` CLI
+- **Version Control:** Git & GitHub
+
+---
+
+## 🎯 Learning Outcomes
+- Built a real-world **multi-player console game**
+- Strengthened array and string manipulation skills
+- Applied core C# fundamentals in practical scenarios
+- Improved problem decomposition using methods
+- Gained experience writing clean, modular code
+
+---
+
+## ✅ Conclusion
+Day 07 emphasized **real-world scenario-based programming** using C#.  
+By building a Snake & Ladder game and solving array and string problems, this day strengthened logical thinking, modular design, and confidence in applying C# fundamentals to practical applications.
+
+---
+
+# 📅 Day 08 – Scenario-Based Problem Solving in C#
+
+## 📌 Overview
+Day 08 focused on solving **real-world scenario problems** using C# arrays, string operations, and modular method design.  
+The day emphasized building small systems like a **Library Management System** and an **EduQuiz Grader**, strengthening skills in data handling, searching, and feedback generation.
+
+---
+
+## 🧪 Programs & Modules Implemented
+
+### 🔹 1. Library Management System – Book Search & Checkout
+**Scenario:** A small library system to manage books and track checkouts.  
+
+**Problem Requirements:**
+- Store book details (title, author, status) in an array.  
+- Allow searching by partial title using string operations.  
+- Methods for:
+  - Searching books  
+  - Displaying book details  
+  - Updating book status (Checked Out / Available)  
+
+---
+
+### 🔹 2. EduQuiz – Student Quiz Grader
+**Story:** A grading module for a quiz app where a student answers a 10-question quiz.  
+
+**Problem Requirements:**
+- Use two `String[]` arrays: `correctAnswers[]` and `studentAnswers[]`.  
+- Implement `calculateScore(String[] correct, String[] student)` to return a score.  
+- Case-insensitive comparison using `.EqualsIgnoreCase()`.  
+- Print detailed feedback:  
+  - Example → `Question 1: Correct / Incorrect`.  
+- Bonus: Show percentage score.  
+
+---
+
+## 📘 Concepts Covered
+- Arrays for storing structured data  
+- String operations for partial search and case-insensitive comparison  
+- Modular methods for searching, updating, and grading  
+- Feedback generation and score calculation  
+- Real-world application of string and array handling  
+
+---
+
+## 🛠️ Tools & Technologies
+- **Language:** C#  
+- **Framework:** .NET  
+- **Environment:** Visual Studio / `csc` Compiler  
+- **Version Control:** Git & GitHub  
+
+---
+
+## 🎯 Learning Outcomes
+- Learned how to design small systems using arrays and methods  
+- Practiced partial string search and case-insensitive comparison  
+- Built reusable methods for book management and quiz grading  
+- Strengthened logical thinking with structured problem-solving  
+- Enhanced ability to provide user feedback in applications  
+
+---
+
+## ✅ Conclusion
+Day 08 applied **C# programming concepts** to **real-world scenarios** like library management and quiz grading.  
+This day improved skills in **array handling, string operations, and modular design**, preparing for larger **application development projects**.
 
 ---
