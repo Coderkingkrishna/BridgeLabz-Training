@@ -68,4 +68,16 @@ class EmployeeUtilityImpl : IEmployee{
         Console.WriteLine("Daily Wage: " + wage);
     }
 
+    public void CalculateMonthlyWage(int empId){
+        Employee emp = FindEmployee(empId);
+        if(emp == null){
+            Console.WriteLine("Employee not found");
+            return;
+        }
+
+        int hours = emp.GetEmpType() == 1 ? 8 : 4;
+        int monthlyWage = hours * emp.GetWagePerHour() * 20;
+        Console.WriteLine("Monthly Wage: " + monthlyWage);
+    }
+
 }
