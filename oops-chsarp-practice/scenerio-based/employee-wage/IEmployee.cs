@@ -1,0 +1,4 @@
+interface IEmployee{
+    void AddEmployee();
+    
+}
