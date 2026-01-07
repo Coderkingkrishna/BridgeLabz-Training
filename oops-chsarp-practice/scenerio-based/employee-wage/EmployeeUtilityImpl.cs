@@ -80,4 +80,31 @@ class EmployeeUtilityImpl : IEmployee{
         Console.WriteLine("Monthly Wage: " + monthlyWage);
     }
 
+    public void CalculateWageTillCondition(int empId){
+        Employee emp = FindEmployee(empId);
+        if(emp == null){
+            Console.WriteLine("Employee not found");
+            return;
+        }
+
+        Random random = new Random();
+        int totalHours = 0;
+        int totalDays = 0;
+        int totalWage = 0;
+
+        while(totalHours < 100 && totalDays < 20){
+            totalDays++;
+            int attendance = random.Next(0,2);
+
+            if(attendance == 1){
+                int hours = emp.GetEmpType() == 1 ? 8 : 4;
+                totalHours += hours;
+                totalWage += hours * emp.GetWagePerHour();
+            }
+        }
+
+        Console.WriteLine("Total Days: " + totalDays);
+        Console.WriteLine("Total Hours: " + totalHours);
+        Console.WriteLine("Total Wage: " + totalWage);
+    }
 }
