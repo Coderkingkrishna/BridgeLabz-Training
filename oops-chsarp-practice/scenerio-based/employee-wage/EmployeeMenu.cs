@@ -12,7 +12,7 @@ sealed class EmployeeMenu{
         do{
             Console.WriteLine("1 Add Employee");
             Console.WriteLine("2 Check Attendance");
-            
+            Console.WriteLine("3 Calculate Daily Wage");
             Console.WriteLine("0 Exit");
 
             choice=int.Parse(Console.ReadLine());
@@ -25,7 +25,10 @@ sealed class EmployeeMenu{
                     case 2:
                         emp.CheckAttendance(empId);
                         break;
-                    
+                    case 3:
+                        emp.CalculateDailyWage(empId);
+                        break;
+                   
                 }
             }
             else if(choice==1){

@@ -56,4 +56,16 @@ class EmployeeUtilityImpl : IEmployee{
         Console.WriteLine(attendance == 1 ? "Employee Present" : "Employee Absent");
     }
 
+    public void CalculateDailyWage(int empId){
+        Employee emp = FindEmployee(empId);
+        if(emp == null){
+            Console.WriteLine("Employee not found");
+            return;
+        }
+
+        int hours = emp.GetEmpType() == 1 ? 8 : 4;
+        int wage = hours * emp.GetWagePerHour();
+        Console.WriteLine("Daily Wage: " + wage);
+    }
+
 }
