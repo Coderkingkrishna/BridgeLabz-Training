@@ -43,4 +43,17 @@ class EmployeeUtilityImpl : IEmployee{
         Console.WriteLine("Employee added successfully");
     }
 
+    public void CheckAttendance(int empId){
+        Employee emp = FindEmployee(empId);
+        if(emp == null){
+            Console.WriteLine("Employee not found");
+            return;
+        }
+
+        Random random = new Random();
+        int attendance = random.Next(0,2);
+
+        Console.WriteLine(attendance == 1 ? "Employee Present" : "Employee Absent");
+    }
+
 }
