@@ -4,13 +4,9 @@ sealed class EmployeeMenu
 {
     IEmployee emp;
 
-    public EmployeeMenu()
-    {
-        emp = new EmployeeUtilityImpl(); // Upcasting
-    }
-
     public void ShowMenu()
     {
+        emp = new EmployeeUtilityImpl();
         int choice;
         do
         {
