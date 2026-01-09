@@ -16,7 +16,7 @@ class Note
     }
 }
 
-// ATM logic class
+// ATM logic classes
 class ATM
 {
     private Note[] notes;
