@@ -86,7 +86,7 @@ class ATMTest
 {
     static void Main()
     {
-        // Scenario A
+        // Scenario A1
         Console.WriteLine("Scenario A: All Notes Available");
         Note[] notesA =
         {
