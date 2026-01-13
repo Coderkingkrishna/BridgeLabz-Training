@@ -341,3 +341,129 @@ Prices depend on the size of each piece.
 Scenario-based problems bridge the gap between theory and real-world applications.
 They strengthen problem-solving skills by introducing constraints, trade-offs, and business impact.
 This approach builds confidence for real projects, system design, and interviews.
+
+
+# 📅 Day 6 – Scenario Based Projects (C#)
+
+## 🚀 Topic Start
+Day 6 focuses on building **real-world scenario-based projects** using C#.
+These projects mimic real applications where data structures, logic, design patterns,
+and user needs intersect — not just algorithmic puzzles.
+
+Two major applications were implemented:
+1. **Movie Scheduler**
+2. **BookBuddy**
+
+Both are end-to-end console or desktop applications that solve practical problems.
+
+---
+
+## 🎬 Project 1: Movie Scheduler
+
+### 📌 Context
+A *Movie Scheduler* system manages movie showtimes, theaters, booking slots, and scheduling conflicts.
+It aims to help a small cinema manage:
+- Available movies
+- Showtimes
+- Scheduling without overlaps
+- Efficient utilization of screens
+
+---
+
+### 📚 Theory Learned
+This project reinforces:
+- Date/Time handling in C#
+- Scheduling logic to avoid overlapping time slots
+- Object-oriented modeling of entities (Movie, Screen, Show)
+- Collections management using lists, dictionaries, and sorting
+
+---
+
+### 🧠 What I Learned
+- How to map real entities into classes
+- How to handle temporal constraints (start, end times)
+- Designing a simple but functional scheduler
+- Keeping collections organized and efficient
+
+---
+
+### ✨ New Things Learned
+- Handling scheduling conflicts and conflict resolution
+- Time-based sorting and prioritization
+- How user choices can dynamically update available slots
+- Using C# events and delegates (if implemented)
+
+---
+
+### 🎯 What I Achieved
+- Built a working Movie Scheduler application
+- Applied data structure logic to a real-world scheduling problem
+- Debugged edge cases (overlaps, incorrect user input, invalid times)
+- Practiced clean project structure
+
+---
+
+### 🧾 Conclusion
+Movie Scheduler combines business logic with algorithmic thinking.
+It demonstrates how to model and solve real application requirements beyond abstract coding problems.
+
+---
+
+## 📚 Project 2: BookBuddy
+
+### 📌 Context
+A *BookBuddy* system manages a library of books, users, borrowing/returning logic, and tracking.
+This project simulates:
+- List of available books
+- Borrowed books tracking
+- User constraints (max books at a time)
+- Due dates and fine calculation
+
+---
+
+### 📚 Theory Learned
+This application taught:
+- CRUD operations in console programs
+- Collections and hashing for unique tracking
+- Mapping users to books
+- Handling date calculations (borrowed vs returned)
+
+---
+
+### 🧠 What I Learned
+- How to design persistent logic (even without a database)
+- Emulating library workflows
+- Handling user input validation
+- Structuring larger codebases into modules
+
+---
+
+### ✨ New Things Learned
+- Real life constraints (e.g., max books per user)
+- Using `Dictionary<TKey, TValue>` for tracking
+- Date and time manipulations for borrow durations
+- Designing user flows
+
+---
+
+### 🎯 What I Achieved
+- Implemented a complete library management experience
+- Learned how to track relationshipsBetween entities (User ↔ Book)
+- Improved UI/UX in pure console environments
+- Gained confidence in building complete applications
+
+---
+
+## 🏆 Overall Day 6 Summary
+
+| Project | Focus | Skills Practiced |
+|--------|--------|-------------------|
+| Movie Scheduler | Scheduling & Time | Classes, Lists, Sorting, Time |
+| BookBuddy | Management System | Collections, Dictionary, Business Logic |
+
+---
+
+## 🧾 Day 6 Conclusion
+Day 6 elevates DSA learning to application building.
+Rather than solving isolated problems, you create systems that could be shipped in real environments.
+This solidifies both technical and design skills essential for software engineering roles.
