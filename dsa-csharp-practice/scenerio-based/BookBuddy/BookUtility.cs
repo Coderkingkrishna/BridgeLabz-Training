@@ -5,8 +5,13 @@ class BookUtility : IBookService
     private string[] books = new string[100];
     private int count = 0;
 
-    public void AddBook(string title, string author)
+    public void AddBook()
     {
+        Console.Write("Enter Title: ");
+        string title = Console.ReadLine();
+
+        Console.Write("Enter Author: ");
+        string author = Console.ReadLine();
         if (count >= books.Length)
         {
             Console.WriteLine(" Bookshelf is full");
@@ -41,15 +46,17 @@ class BookUtility : IBookService
         Console.WriteLine(" Books sorted by TITLE only");
     }
 
-    public void SearchByAuthor(string author)
+    public void SearchByAuthor()
     {
+        Console.Write("Enter Author: ");
+        string author = Console.ReadLine();
         bool found = false;
 
         for (int i = 0; i < count; i++)
         {
             string[] parts = books[i].Split('-');
 
-            if (parts.Length == 2 && parts[1].Equals(author, StringComparison.OrdinalIgnoreCase))
+            if (parts[1].Equals(author, StringComparison.OrdinalIgnoreCase))
             {
                 Console.WriteLine(books[i]);
                 found = true;

@@ -2,9 +2,11 @@ using System;
 
 class Menu
 {
+    IBookService service;
+
     public static void Run()
     {
-        IBookService service = new BookUtility();
+        service = new BookUtility();
         int choice;
 
         do
@@ -22,13 +24,8 @@ class Menu
             switch (choice)
             {
                 case 1:
-                    Console.Write("Enter Title: ");
-                    string title = Console.ReadLine();
 
-                    Console.Write("Enter Author: ");
-                    string author = Console.ReadLine();
-
-                    service.AddBook(title, author);
+                    service.AddBook();
                     break;
 
                 case 2:
@@ -36,8 +33,8 @@ class Menu
                     break;
 
                 case 3:
-                    Console.Write("Enter Author: ");
-                    service.SearchByAuthor(Console.ReadLine());
+
+                    service.SearchByAuthor();
                     break;
 
                 case 4:

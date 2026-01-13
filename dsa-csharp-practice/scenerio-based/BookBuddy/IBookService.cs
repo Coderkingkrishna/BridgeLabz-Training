@@ -1,7 +1,7 @@
 interface IBookService
 {
-    void AddBook(string title, string author);
+    void AddBook();
     void SortBooksAlphabetically();
-    void SearchByAuthor(string author);
+    void SearchByAuthor();
     void DisplayBooks();
 }
