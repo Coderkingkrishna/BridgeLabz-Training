@@ -467,3 +467,141 @@ This application taught:
 Day 6 elevates DSA learning to application building.
 Rather than solving isolated problems, you create systems that could be shipped in real environments.
 This solidifies both technical and design skills essential for software engineering roles.
+
+
+# 📅 Day 7 – Runtime Algorithm Comparison (C#)
+
+## 🚀 Topic Start
+Day 7 focuses on analyzing and comparing the **runtime performance of common algorithms** in C#.
+The goal is to understand how **time complexity impacts execution time, scalability, and efficiency**
+when algorithms are applied to real data sizes.
+
+This day emphasizes **measurement over theory**, using actual runtime execution to validate
+Big-O concepts.
+
+---
+
+## 📚 Theory Learned
+- Time Complexity and its impact on performance
+- Difference between theoretical complexity and real execution time
+- Scalability behavior of algorithms
+- Cost of recursion vs iteration
+- Memory and performance trade-offs in C#
+
+---
+
+## 🧪 Algorithms & Problems Covered
+
+### 🔍 Searching Algorithms
+
+| Algorithm        | Time Complexity |
+|------------------|-----------------|
+| Linear Search    | O(N)            |
+| Binary Search    | O(log N)        |
+
+**Observation**
+- Binary Search is significantly faster for large, sorted datasets
+- Sorting once and using Binary Search is optimal for repeated searches
+
+---
+
+### 🔄 Sorting Algorithms
+
+| Algorithm        | Time Complexity |
+|------------------|-----------------|
+| Bubble Sort      | O(N²)           |
+| Selection Sort   | O(N²)           |
+| Insertion Sort   | O(N²)           |
+| Merge Sort       | O(N log N)      |
+| Quick Sort       | O(N log N)      |
+| Heap Sort        | O(N log N)      |
+
+**Observation**
+- Bubble Sort becomes impractical as input size grows
+- Merge Sort and Quick Sort scale efficiently for large datasets
+
+---
+
+### 🧵 String Concatenation Performance
+
+| Method           | Time Complexity |
+|------------------|-----------------|
+| `string`         | O(N²)           |
+| `StringBuilder` | O(N)            |
+
+**Observation**
+- `StringBuilder` is far more efficient for repeated string operations
+- Immutable strings create performance overhead
+
+---
+
+### 📂 File Reading Performance
+
+| Method         | Best Use Case              |
+|---------------|----------------------------|
+| StreamReader  | Text-based files           |
+| FileStream    | Large or binary files      |
+
+**Observation**
+- FileStream performs better for large files
+- Choosing the correct IO method improves performance significantly
+
+---
+
+### 🔁 Fibonacci Computation
+
+| Approach   | Time Complexity |
+|-----------|-----------------|
+| Recursive | O(2ⁿ)           |
+| Iterative | O(N)            |
+
+**Observation**
+- Recursive Fibonacci becomes infeasible for large values of N
+- Iterative approach is efficient and scalable
+
+---
+
+## ⏱ Runtime Measurement
+- Execution time measured in milliseconds
+- Used `Stopwatch` / `DateTime`
+- Tested with small and large input sizes
+- Compared execution behavior under different workloads
+
+---
+
+## 🧠 What I Learned
+- Big-O notation directly reflects real execution behavior
+- O(N log N) algorithms scale far better than O(N²)
+- Recursive solutions can be extremely expensive without optimization
+- Measuring performance is essential, not optional
+
+---
+
+## ✨ New Things Learned
+- Practical impact of algorithm selection
+- Why immutability affects performance
+- How IO choice impacts execution time
+- Importance of benchmarking over assumptions
+
+---
+
+## 🏆 What I Achieved
+- Compared multiple algorithms using real runtime data
+- Built strong intuition for performance optimization
+- Improved ability to choose the right algorithm and data structure
+- Strengthened interview and real-world problem-solving skills
+
+---
+
+## 🛠 Technologies Used
+- Language: C#
+- Concepts: DSA, Time Complexity, Performance Analysis
+- Tools: .NET Console Application
+
+---
+
+## 🧾 Conclusion
+Efficient algorithms dramatically reduce execution time and resource usage.
+Understanding runtime complexity and validating it through measurement
+is essential for building scalable, high-performance applications.
+Day 7 reinforces the importance of **thinking beyond correctness and focusing on efficiency**.
