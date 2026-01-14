@@ -2,7 +2,7 @@ using System;
 
 class AddressBookUtility : IAddressBook
 {
-    private ContactPerson[] contacts = new ContactPerson[100];
+    private ContactPerson[] contacts = new ContactPerson[100]; // contacts array to store multiple contacts
     private int count = 0;
 
     public void AddContact()
@@ -23,7 +23,7 @@ class AddressBookUtility : IAddressBook
         string phoneNumber = Console.ReadLine();
         Console.WriteLine("Enter Email:");
         string email = Console.ReadLine();
-        contacts[count] = new ContactPerson(
+        contacts[count] = new ContactPerson( // add contact to array
             firstName,
             lastName,
             address,

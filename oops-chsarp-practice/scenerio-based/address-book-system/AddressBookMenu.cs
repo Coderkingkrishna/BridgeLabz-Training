@@ -11,7 +11,7 @@ class AddressBookMenu
         do
         {
             Console.WriteLine("Welcome to Address Book System");
-            Console.WriteLine("1. Adding a new contact");
+            Console.WriteLine("1. Adding a new contact"); // can save multiple contacts
             Console.WriteLine("2. Editing an existing contact");
             Console.WriteLine("3. Deleting a contact");
             Console.WriteLine("0. Exit");
