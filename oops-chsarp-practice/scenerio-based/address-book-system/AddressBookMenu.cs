@@ -12,7 +12,8 @@ class AddressBookMenu
         {
             Console.WriteLine("Welcome to Address Book System");
             Console.WriteLine("1. Adding a new contact");
-            Console.WriteLine("2. Exit");
+            Console.WriteLine("2. Editing an existing contact");
+            Console.WriteLine("0. Exit");
             Console.Write("Enter your choice: ");
             choice = int.Parse(Console.ReadLine());
             switch (choice)
@@ -21,12 +22,15 @@ class AddressBookMenu
                     service.AddContact();
                     break;
                 case 2:
+                    service.EditContact();
+                    break;
+                case 0:
                     Console.WriteLine("Exiting...");
                     break;
                 default:
                     Console.WriteLine("Invalid choice! Please try again.");
                     break;
             }
-        } while (choice != 2);
+        } while (choice != 0);
     }
 }
