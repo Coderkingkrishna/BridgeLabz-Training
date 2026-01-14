@@ -13,6 +13,7 @@ class AddressBookMenu
             Console.WriteLine("Welcome to Address Book System");
             Console.WriteLine("1. Adding a new contact");
             Console.WriteLine("2. Editing an existing contact");
+            Console.WriteLine("3. Deleting a contact");
             Console.WriteLine("0. Exit");
             Console.Write("Enter your choice: ");
             choice = int.Parse(Console.ReadLine());
@@ -23,6 +24,9 @@ class AddressBookMenu
                     break;
                 case 2:
                     service.EditContact();
+                    break;
+                case 3:
+                    service.DeleteContact();
                     break;
                 case 0:
                     Console.WriteLine("Exiting...");

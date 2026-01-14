@@ -109,4 +109,36 @@ class AddressBookUtility : IAddressBook
             Console.WriteLine("Contact not found.");
         }
     }
+
+    public void DeleteContact()
+    {
+        Console.WriteLine("Enter First Name of the contact to delete:");
+        string firstName = Console.ReadLine();
+        Console.WriteLine("Enter Last Name of the contact to delete:");
+        string lastName = Console.ReadLine();
+
+        bool found = false;
+        for (int i = 0; i < count; i++)
+        {
+            if (
+                contacts[i].firstName.Equals(firstName, StringComparison.OrdinalIgnoreCase)
+                && contacts[i].lastName.Equals(lastName, StringComparison.OrdinalIgnoreCase)
+            )
+            {
+                found = true;
+                for (int j = i; j < count - 1; j++)
+                {
+                    contacts[j] = contacts[j + 1];
+                }
+                contacts[count - 1] = null;
+                count--;
+                Console.WriteLine("Contact deleted.");
+                break;
+            }
+        }
+        if (!found)
+        {
+            Console.WriteLine("Contact not found.");
+        }
+    }
 }

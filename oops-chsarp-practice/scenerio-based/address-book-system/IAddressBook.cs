@@ -2,4 +2,5 @@ interface IAddressBook
 {
     void AddContact();
     void EditContact();
+    void DeleteContact();
 }
