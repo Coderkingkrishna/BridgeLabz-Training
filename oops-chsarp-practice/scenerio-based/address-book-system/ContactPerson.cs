@@ -1,4 +1,4 @@
-class AddressBook
+class ContactPerson
 {
     private string FirstName;
     private string LastName;
@@ -49,7 +49,7 @@ class AddressBook
         set { Email = value; }
     }
 
-    public AddressBook(
+    public ContactPerson(
         string firstName,
         string lastName,
         string address,

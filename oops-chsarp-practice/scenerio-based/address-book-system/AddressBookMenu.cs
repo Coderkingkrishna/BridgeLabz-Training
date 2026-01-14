@@ -1,0 +1,32 @@
+using System;
+
+class AddressBookMenu
+{
+    IAddressBook service;
+
+    public void Run()
+    {
+        service = new AddressBookUtility();
+        int choice;
+        do
+        {
+            Console.WriteLine("Welcome to Address Book System");
+            Console.WriteLine("1. Adding a new contact");
+            Console.WriteLine("2. Exit");
+            Console.Write("Enter your choice: ");
+            choice = int.Parse(Console.ReadLine());
+            switch (choice)
+            {
+                case 1:
+                    service.AddContact();
+                    break;
+                case 2:
+                    Console.WriteLine("Exiting...");
+                    break;
+                default:
+                    Console.WriteLine("Invalid choice! Please try again.");
+                    break;
+            }
+        } while (choice != 2);
+    }
+}

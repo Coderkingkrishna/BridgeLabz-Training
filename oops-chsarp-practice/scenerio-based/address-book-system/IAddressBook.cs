@@ -1,0 +1,4 @@
+interface IAddressBook
+{
+    void AddContact();
+}
