@@ -87,4 +87,48 @@ class AddressBookMultiple
             books[i].SearchByState(state);
         }
     }
+
+    public void ViewPersonCountByCity()
+    {
+        if (count == 0)
+        {
+            Console.WriteLine("No Address Books available.");
+            return;
+        }
+
+        Console.Write("Enter City: ");
+        string city = Console.ReadLine();
+
+        int totalCount = 0;
+
+        for (int i = 0; i < count; i++)
+        {
+            int result = books[i].CountByCity(city);
+            totalCount += result;
+        }
+
+        Console.WriteLine("Total persons in city " + city + " = " + totalCount);
+    }
+
+    public void ViewPersonCountByState()
+    {
+        if (count == 0)
+        {
+            Console.WriteLine("No Address Books available.");
+            return;
+        }
+
+        Console.Write("Enter State: ");
+        string state = Console.ReadLine();
+
+        int totalCount = 0;
+
+        for (int i = 0; i < count; i++)
+        {
+            int result = books[i].CountByState(state);
+            totalCount += result;
+        }
+
+        Console.WriteLine("Total persons in state " + state + " = " + totalCount);
+    }
 }

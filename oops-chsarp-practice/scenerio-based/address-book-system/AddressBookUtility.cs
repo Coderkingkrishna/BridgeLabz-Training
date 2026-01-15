@@ -258,4 +258,32 @@ class AddressBookUtility : IAddressBook
         if (!found)
             Console.WriteLine("No contacts found in state: " + state);
     }
+
+    public int CountByCity(string city)
+    {
+        int countCity = 0;
+
+        for (int i = 0; i < count; i++)
+        {
+            if (contacts[i].city.Equals(city, StringComparison.OrdinalIgnoreCase))
+            {
+                countCity++;
+            }
+        }
+        return countCity;
+    }
+
+    public int CountByState(string state)
+    {
+        int countState = 0;
+
+        for (int i = 0; i < count; i++)
+        {
+            if (contacts[i].state.Equals(state, StringComparison.OrdinalIgnoreCase))
+            {
+                countState++;
+            }
+        }
+        return countState;
+    }
 }

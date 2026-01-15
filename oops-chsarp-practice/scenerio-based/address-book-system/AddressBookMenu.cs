@@ -14,6 +14,8 @@ class AddressBookMenu
             Console.WriteLine("2. Select Address Book");
             Console.WriteLine("3. Search Person by City");
             Console.WriteLine("4. Search Person by State");
+            Console.WriteLine("5. View Person Count by City");
+            Console.WriteLine("6. View Person Count by State");
 
             Console.WriteLine("0. Exit");
             Console.Write("Enter choice: ");
@@ -37,6 +39,12 @@ class AddressBookMenu
                     break;
                 case 4:
                     system.SearchPersonByState();
+                    break;
+                case 5:
+                    system.ViewPersonCountByCity();
+                    break;
+                case 6:
+                    system.ViewPersonCountByState();
                     break;
 
                 case 0:
