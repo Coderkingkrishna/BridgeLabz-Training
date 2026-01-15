@@ -12,6 +12,9 @@ class AddressBookMenu
             Console.WriteLine("\n===== ADDRESS BOOK SYSTEM =====");
             Console.WriteLine("1. Add Address Book");
             Console.WriteLine("2. Select Address Book");
+            Console.WriteLine("3. Search Person by City");
+            Console.WriteLine("4. Search Person by State");
+
             Console.WriteLine("0. Exit");
             Console.Write("Enter choice: ");
 
@@ -27,6 +30,13 @@ class AddressBookMenu
                     IAddressBook book = system.SelectAddressBook();
                     if (book != null)
                         AddressBookOperations(book);
+                    break;
+
+                case 3:
+                    system.SearchPersonByCity();
+                    break;
+                case 4:
+                    system.SearchPersonByState();
                     break;
 
                 case 0:

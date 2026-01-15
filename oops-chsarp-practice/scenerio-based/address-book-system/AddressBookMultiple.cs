@@ -50,4 +50,41 @@ class AddressBookMultiple
 
         return books[choice - 1]; // RETURNING INTERFACE
     }
+
+    // ================= UC-8 =================
+    public void SearchPersonByCity()
+    {
+        if (count == 0)
+        {
+            Console.WriteLine("No Address Books available.");
+            return;
+        }
+
+        Console.Write("Enter City: ");
+        string city = Console.ReadLine();
+
+        for (int i = 0; i < count; i++)
+        {
+            Console.WriteLine("\nAddress Book: " + names[i]);
+            books[i].SearchByCity(city);
+        }
+    }
+
+    public void SearchPersonByState()
+    {
+        if (count == 0)
+        {
+            Console.WriteLine("No Address Books available.");
+            return;
+        }
+
+        Console.Write("Enter State: ");
+        string state = Console.ReadLine();
+
+        for (int i = 0; i < count; i++)
+        {
+            Console.WriteLine("\nAddress Book: " + names[i]);
+            books[i].SearchByState(state);
+        }
+    }
 }

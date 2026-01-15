@@ -223,4 +223,39 @@ class AddressBookUtility : IAddressBook
 
         return zip;
     }
+
+    // ================= UC-8 =================
+    public void SearchByCity(string city)
+    {
+        bool found = false;
+
+        for (int i = 0; i < count; i++)
+        {
+            if (contacts[i].city.Equals(city, StringComparison.OrdinalIgnoreCase))
+            {
+                Console.WriteLine(contacts[i]);
+                found = true;
+            }
+        }
+
+        if (!found)
+            Console.WriteLine("No contacts found in city: " + city);
+    }
+
+    public void SearchByState(string state)
+    {
+        bool found = false;
+
+        for (int i = 0; i < count; i++)
+        {
+            if (contacts[i].state.Equals(state, StringComparison.OrdinalIgnoreCase))
+            {
+                Console.WriteLine(contacts[i]);
+                found = true;
+            }
+        }
+
+        if (!found)
+            Console.WriteLine("No contacts found in state: " + state);
+    }
 }
