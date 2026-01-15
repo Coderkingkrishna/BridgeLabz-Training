@@ -2,21 +2,59 @@ using System;
 
 class AddressBookMenu
 {
-    IAddressBook service;
+    AddressBookMultiple system = new AddressBookMultiple();
 
     public void Run()
     {
-        service = new AddressBookUtility();
         int choice;
         do
         {
-            Console.WriteLine("Welcome to Address Book System");
-            Console.WriteLine("1. Adding a new contact"); // can save multiple contacts
-            Console.WriteLine("2. Editing an existing contact");
-            Console.WriteLine("3. Deleting a contact");
+            Console.WriteLine("\n===== ADDRESS BOOK SYSTEM =====");
+            Console.WriteLine("1. Add Address Book");
+            Console.WriteLine("2. Select Address Book");
             Console.WriteLine("0. Exit");
-            Console.Write("Enter your choice: ");
+            Console.Write("Enter choice: ");
+
             choice = int.Parse(Console.ReadLine());
+
+            switch (choice)
+            {
+                case 1:
+                    system.AddAddressBook();
+                    break;
+
+                case 2:
+                    IAddressBook book = system.SelectAddressBook();
+                    if (book != null)
+                        AddressBookOperations(book);
+                    break;
+
+                case 0:
+                    Console.WriteLine("Exiting...");
+                    break;
+
+                default:
+                    Console.WriteLine("Invalid choice.");
+                    break;
+            }
+        } while (choice != 0);
+    }
+
+    private void AddressBookOperations(IAddressBook service)
+    {
+        int choice;
+        do
+        {
+            Console.WriteLine("\n--- Address Book Menu ---");
+            Console.WriteLine("1. Add Contact");
+            Console.WriteLine("2. Edit Contact");
+            Console.WriteLine("3. Delete Contact");
+            Console.WriteLine("4. Display Contacts");
+            Console.WriteLine("0. Back");
+            Console.Write("Enter choice: ");
+
+            choice = int.Parse(Console.ReadLine());
+
             switch (choice)
             {
                 case 1:
@@ -28,11 +66,13 @@ class AddressBookMenu
                 case 3:
                     service.DeleteContact();
                     break;
+                case 4:
+                    service.DisplayContacts();
+                    break;
                 case 0:
-                    Console.WriteLine("Exiting...");
                     break;
                 default:
-                    Console.WriteLine("Invalid choice! Please try again.");
+                    Console.WriteLine("Invalid choice.");
                     break;
             }
         } while (choice != 0);
