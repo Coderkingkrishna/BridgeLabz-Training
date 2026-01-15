@@ -8,4 +8,5 @@ interface IAddressBook
     void SearchByState(string state);
     int CountByCity(string city);
     int CountByState(string state);
+    void SortContactsByName();
 }

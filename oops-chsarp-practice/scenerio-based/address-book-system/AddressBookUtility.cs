@@ -286,4 +286,36 @@ class AddressBookUtility : IAddressBook
         }
         return countState;
     }
+
+    public void SortContactsByName()
+    {
+        if (count < 2)
+        {
+            Console.WriteLine("Not enough contacts to sort.");
+            return;
+        }
+
+        // Bubble Sort by First Name (UC-10)
+        for (int i = 0; i < count - 1; i++)
+        {
+            for (int j = 0; j < count - i - 1; j++)
+            {
+                if (
+                    string.Compare(
+                        contacts[j].firstName,
+                        contacts[j + 1].firstName,
+                        StringComparison.OrdinalIgnoreCase
+                    ) > 0
+                )
+                {
+                    ContactPerson temp = contacts[j];
+                    contacts[j] = contacts[j + 1];
+                    contacts[j + 1] = temp;
+                }
+            }
+        }
+
+        Console.WriteLine("Contacts in [" + bookName + "] sorted by name.");
+        DisplayContacts();
+    }
 }

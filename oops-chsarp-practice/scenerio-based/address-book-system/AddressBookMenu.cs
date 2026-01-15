@@ -68,6 +68,7 @@ class AddressBookMenu
             Console.WriteLine("2. Edit Contact");
             Console.WriteLine("3. Delete Contact");
             Console.WriteLine("4. Display Contacts");
+            Console.WriteLine("5. Sort Contacts By name");
             Console.WriteLine("0. Back");
             Console.Write("Enter choice: ");
 
@@ -86,6 +87,9 @@ class AddressBookMenu
                     break;
                 case 4:
                     service.DisplayContacts();
+                    break;
+                case 5:
+                    service.SortContactsByName();
                     break;
                 case 0:
                     break;
