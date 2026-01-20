@@ -605,3 +605,250 @@ Efficient algorithms dramatically reduce execution time and resource usage.
 Understanding runtime complexity and validating it through measurement
 is essential for building scalable, high-performance applications.
 Day 7 reinforces the importance of **thinking beyond correctness and focusing on efficiency**.
+
+
+---
+
+## 📅 January 15, 2026 – Day 8  
+### 🎯 Topics Covered
+- Browser Tab Management System
+- Tab navigation and lifecycle handling
+- Browser functionality simulation using DSA concepts
+
+---
+
+### 🏗️ Scenario-Based Project  
+## 🌐 Browser Buddy System
+
+A console-based browser simulation that focuses on **tab management and navigation control**, similar to a real web browser.
+
+---
+
+### 🧪 Tab Management Features
+- Create new browser tabs
+- Switch between active tabs
+- Close existing tabs
+- Track tab navigation history
+
+---
+
+### 🧪 Browser Functionality
+- URL navigation handling
+- Active tab management
+- Tab organization logic
+- Navigation history tracking
+
+---
+
+### 🧪 Menu System
+- Interactive console-based UI
+- Tab operations menu
+- Navigation controls
+- Display current browser status
+
+---
+
+### 🔧 Technical Highlights
+- Stack-based tab history handling
+- Browser state management
+- Tab switching and lifecycle control
+- Menu-driven application design
+
+---
+
+### 🏆 What I Achieved
+- Built a real-world browser tab simulation
+- Applied Stack concepts practically
+- Strengthened state and history management logic
+
+---
+
+### 📌 Conclusion
+Day 8 demonstrated how **stack-based structures** power real applications like browser tab navigation and history handling.
+
+---
+
+## 📅 January 16, 2026 – Day 9  
+### 🎯 Topics Covered
+- Traffic Management System
+- Queue-based vehicle processing
+- Circular traffic flow simulation
+
+---
+
+### 🏗️ Scenario-Based Project  
+## 🚦 Traffic Management System
+
+A real-world traffic simulation system using **Queue** and **circular flow logic** to manage vehicles at a roundabout.
+
+---
+
+### 🧪 Vehicle Class
+- Vehicle identification
+- Vehicle type and attributes
+
+---
+
+### 🧪 VehicleQueue Class
+- FIFO (First In First Out) vehicle processing
+- Enqueue and dequeue operations
+- Queue manipulation methods
+
+---
+
+### 🧪 Roundabout Class
+- Circular traffic pattern simulation
+- Vehicle entry and exit handling
+- Continuous traffic flow control
+
+---
+
+### 🧪 TrafficManager Class
+- Core traffic coordination logic
+- Queue-to-roundabout integration
+- Traffic flow optimization
+
+---
+
+### 🧪 Menu Class
+- Interactive console-based UI
+- Add vehicles
+- Process traffic
+- Display traffic status
+
+---
+
+### 🔧 Technical Highlights
+- Queue data structure implementation
+- Circular data flow simulation
+- Real-time state updates
+- Clean separation of responsibilities
+
+---
+
+### 🏆 What I Achieved
+- Simulated real-world traffic flow using DSA
+- Applied Queue concepts effectively
+- Built a scalable, menu-driven system
+
+---
+
+### 📌 Conclusion
+Day 9 reinforced how **queues and circular structures** are essential for managing real-time systems like traffic control.
+
+---
+
+## 📅 January 17, 2026 – Day 10  
+### 🏗️ Scenario-Based Projects
+
+---
+
+## 🏋️ Fitness Application  
+### ✅ Implemented: User Management & Leaderboard System
+
+---
+
+### 🧪 User Management Features
+- User profile creation and management
+- Activity tracking
+- Performance monitoring
+
+---
+
+### 🧪 Leaderboard Features
+- User ranking system
+- Performance comparison
+- Achievement tracking
+
+---
+
+## 🛍️ Flash Dealz Application  
+### ✅ Implemented: Product Management & Sorting System
+
+---
+
+### 🧪 Product Management Features
+- Product catalog management
+- Price tracking and updates
+- Product information storage
+
+---
+
+### 🧪 Sorting Features
+- Sort products by price
+- Sort products by name
+- Sort products by availability
+- Custom sorting logic
+
+---
+
+### 🔧 Technical Highlights
+- User data management
+- Leaderboard ranking logic
+- Sorting algorithm application
+- Menu-driven interaction
+
+---
+
+### 🏆 What I Achieved
+- Built multiple business-oriented applications
+- Applied sorting algorithms in real scenarios
+- Improved data organization and comparison logic
+
+---
+
+### 📌 Conclusion
+Day 10 showed how **DSA directly supports real business use cases**, from fitness tracking to e-commerce sorting.
+
+---
+
+## 📅 January 20, 2026 – Day 11  
+### 🏗️ Scenario-Based Project  
+## 🔐 Password Cracker Simulator
+
+---
+
+### 📖 Problem Brief
+**Story:**  
+Simulate a vault password cracking process by trying all possible combinations.
+
+---
+
+### 🧪 Scenario A – Generate All Strings
+- Generate all possible strings of length `n`
+- Explore the complete password search space
+- Combinatorial string generation
+
+---
+
+### 🧪 Scenario B – Early Termination
+- Stop execution once password is matched
+- Optimize brute-force approach
+- Reduce unnecessary computations
+
+---
+
+### 🧪 Scenario C – Complexity Analysis
+- Visualize exponential growth
+- Compare execution time for different lengths
+- Analyze time and space complexity
+
+---
+
+### 🔧 Technical Highlights
+- Recursive and iterative string generation
+- Early exit optimization
+- Brute-force simulation
+- Algorithm performance analysis
+
+---
+
+### 🏆 What I Achieved
+- Understood exponential time complexity practically
+- Built a complete brute-force simulation
+- Learned why optimization is critical
+
+---
+
+### 📌 Conclusion
+Day 11 provided deep insight into **brute-force algorithms, exponential growth, and performance limits**, strengthening algorithmic thinking.
