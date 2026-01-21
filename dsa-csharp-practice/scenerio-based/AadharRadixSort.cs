@@ -94,7 +94,8 @@ class AadharRadixSort
     // ---------------- BINARY SEARCH ----------------
     static int BinarySearch(long[] arr, long target)
     {
-        int left = 0, right = arr.Length - 1;
+        int left = 0,
+            right = arr.Length - 1;
 
         while (left <= right)
         {
