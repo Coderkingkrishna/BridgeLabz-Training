@@ -1,8 +1,9 @@
-
 class CustomerQueue
 {
     private Customer[] queue;
-    private int front, rear, size;
+    private int front,
+        rear,
+        size;
 
     public CustomerQueue(int capacity)
     {

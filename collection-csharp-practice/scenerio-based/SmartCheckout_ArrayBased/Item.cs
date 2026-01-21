@@ -1,4 +1,3 @@
-
 class Item
 {
     private string itemName;
@@ -12,9 +11,19 @@ class Item
         this.stock = stock;
     }
 
-    public string ItemName { get { return itemName; } }
-    public int Price { get { return price; } }
-    public int Stock { get { return stock; } set { stock = value; } }
+    public string ItemName
+    {
+        get { return itemName; }
+    }
+    public int Price
+    {
+        get { return price; }
+    }
+    public int Stock
+    {
+        get { return stock; }
+        set { stock = value; }
+    }
 
     public override string ToString()
     {
