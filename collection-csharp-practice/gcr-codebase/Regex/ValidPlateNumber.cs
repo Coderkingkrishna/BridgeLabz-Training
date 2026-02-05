@@ -7,7 +7,7 @@ class ValidPlateNumber
     {
         Console.Write("Enter Plate Number : ");
         string plateNumber = Console.ReadLine();
-        string pattern = @"^[A-Z]{2}[0-9]{4}";
+        string pattern = @"^[A-Z]{2}[0-9]{4}$";
         if (Regex.IsMatch(plateNumber, pattern))
         {
             Console.WriteLine("Valid Plate Number");
