@@ -5,6 +5,11 @@ public class RoutineService : Service
     public RoutineService(string name, double cost)
         : base(name, cost) { }
 
+    public override string GetServiceType()
+    {
+        return "Routine";
+    }
+
     public override void Register(int citizenId)
     {
         base.Register(citizenId);

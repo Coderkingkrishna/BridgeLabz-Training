@@ -19,6 +19,11 @@ public class PremiumService : RoutineService
         Console.WriteLine("Features: " + Features);
     }
 
+    public override string GetServiceType()
+    {
+        return "Premium";
+    }
+
     public double GetTotalCost()
     {
         return BaseCost + PremiumFee;

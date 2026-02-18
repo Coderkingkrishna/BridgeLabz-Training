@@ -1,6 +1,6 @@
 using System;
 
-public class Service
+public abstract class Service : IBookable, ICancellable, ITrackable
 {
     private static int counter = 1;
     public static int TotalServices { get; private set; }
@@ -68,6 +68,8 @@ public class Service
     {
         Console.WriteLine("Status: " + status + " | " + lastRegisteredBy);
     }
+
+    public abstract string GetServiceType();
 
     public virtual void Display()
     {

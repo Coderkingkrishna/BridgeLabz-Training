@@ -5,6 +5,11 @@ public class EmergencyService : Service
     public EmergencyService(string name, double cost)
         : base(name, cost) { }
 
+    public override string GetServiceType()
+    {
+        return "Emergency";
+    }
+
     public override void Register(int citizenId)
     {
         base.Register(citizenId);

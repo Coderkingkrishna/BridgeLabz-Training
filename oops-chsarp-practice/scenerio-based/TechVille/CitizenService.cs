@@ -22,6 +22,15 @@ public class CitizenService : ICitizenService
         services.Add(ServiceFactory.CreatePremium(ServiceKind.Transportation));
         services.Add(ServiceFactory.CreatePremium(ServiceKind.Utility));
         services.Add(ServiceFactory.CreatePremium(ServiceKind.Emergency));
+
+        RegisterExternalProviders();
+        foreach (var externalService in ProviderRegistry.LoadServices())
+            services.Add(externalService);
+    }
+
+    private void RegisterExternalProviders()
+    {
+        ProviderRegistry.Register(new PrivateClinicProvider());
     }
 
     public void RegisterFamily(int count)
@@ -221,6 +230,16 @@ public class CitizenService : ICitizenService
         }
 
         citizen.Subscribe(service);
+        ProcessServiceBooking(service, citizen);
+    }
+
+    private void ProcessServiceBooking(IBookable bookable, Citizen citizen)
+    {
+        bookable.Register(citizen);
+
+        ITrackable trackable = bookable as ITrackable;
+        if (trackable != null)
+            trackable.CheckStatus();
     }
 
     public void ViewCitizenServices()
