@@ -1,0 +1,14 @@
+C:\Projects\TechVille\bin\Debug\net8.0\TechVille.exe
+C:\Projects\TechVille\bin\Debug\net8.0\TechVille.deps.json
+C:\Projects\TechVille\bin\Debug\net8.0\TechVille.runtimeconfig.json
+C:\Projects\TechVille\bin\Debug\net8.0\TechVille.dll
+C:\Projects\TechVille\bin\Debug\net8.0\TechVille.pdb
+C:\Projects\TechVille\obj\Debug\net8.0\TechVille.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\TechVille\obj\Debug\net8.0\TechVille.AssemblyInfoInputs.cache
+C:\Projects\TechVille\obj\Debug\net8.0\TechVille.AssemblyInfo.cs
+C:\Projects\TechVille\obj\Debug\net8.0\TechVille.csproj.CoreCompileInputs.cache
+C:\Projects\TechVille\obj\Debug\net8.0\TechVille.dll
+C:\Projects\TechVille\obj\Debug\net8.0\refint\TechVille.dll
+C:\Projects\TechVille\obj\Debug\net8.0\TechVille.pdb
+C:\Projects\TechVille\obj\Debug\net8.0\TechVille.genruntimeconfig.cache
+C:\Projects\TechVille\obj\Debug\net8.0\ref\TechVille.dll
