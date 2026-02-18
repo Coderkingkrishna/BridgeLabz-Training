@@ -5,42 +5,57 @@ public class CitizenService : ICitizenService
 {
     private List<Citizen> citizens = new List<Citizen>();
 
+    private int[] citizenIds = new int[1000];
+    private int idIndex = 0;
+
+    private int[,] zoneSectorCounts = new int[5, 10];
+
     public void RegisterFamily(int count)
     {
         for (int i = 1; i <= count; i++)
         {
-            Console.WriteLine("\nRegistering Member " + i);
-
-            string name = InputUtility.GetString("Enter Name: ");
-
-            if (string.IsNullOrWhiteSpace(name))
+            try
             {
-                Console.WriteLine("Invalid name. Skipping...");
-                continue; // continue demonstration
+                Console.WriteLine("\nRegistering Member " + i);
+
+                string name = InputUtility.GetString("Enter Name: ");
+                if (string.IsNullOrWhiteSpace(name))
+                {
+                    Console.WriteLine("Invalid name. Skipping...");
+                    continue;
+                }
+
+                int age = InputUtility.GetInt("Enter Age: ");
+                if (age < 0)
+                {
+                    Console.WriteLine("Negative age entered. Stopping registration.");
+                    break;
+                }
+
+                double income = InputUtility.GetDouble("Enter Income: ");
+                int residency = InputUtility.GetInt("Enter Residency Years: ");
+                int zone = InputUtility.GetInt("Enter Zone (1-5): ");
+                int sector = InputUtility.GetInt("Enter Sector (1-10): ");
+
+                Citizen citizen = new Citizen(name, age, income, residency, zone, sector);
+                citizens.Add(citizen);
+
+                citizenIds[idIndex++] = citizen.CitizenId;
+                zoneSectorCounts[zone - 1, sector - 1]++;
+
+                double score = CalculateEligibility(citizen);
+                string package = DeterminePackage(score);
+
+                string status = age >= 18 ? "Adult" : "Minor";
+
+                Console.WriteLine("Status: " + status);
+                Console.WriteLine("Eligibility Score: " + score);
+                Console.WriteLine("Service Package: " + package);
             }
-
-            int age = InputUtility.GetInt("Enter Age: ");
-
-            if (age < 0)
+            catch (Exception ex)
             {
-                Console.WriteLine("Negative age entered. Stopping registration.");
-                break; // break demonstration
+                Console.WriteLine("Error: " + ex.Message);
             }
-
-            double income = InputUtility.GetDouble("Enter Income: ");
-            int residency = InputUtility.GetInt("Enter Residency Years: ");
-
-            Citizen citizen = new Citizen(name, age, income, residency);
-            citizens.Add(citizen);
-
-            double score = CalculateEligibility(citizen);
-            string package = DeterminePackage(score);
-
-            string status = age >= 18 ? "Adult" : "Minor"; // ternary
-
-            Console.WriteLine("Status: " + status);
-            Console.WriteLine("Eligibility Score: " + score);
-            Console.WriteLine("Service Package: " + package);
         }
     }
 
@@ -62,7 +77,6 @@ public class CitizenService : ICitizenService
     {
         double score = 0;
 
-        // Nested if-else
         if (citizen.Age >= 18)
         {
             if (citizen.Age >= 60)
@@ -90,16 +104,29 @@ public class CitizenService : ICitizenService
 
     private string DeterminePackage(double score)
     {
-        switch (score)
-        {
-            case double s when (s < 40):
-                return "Basic";
-            case double s when (s < 60):
-                return "Silver";
-            case double s when (s < 80):
-                return "Gold";
-            default:
-                return "Platinum";
-        }
+        if (score < 40)
+            return "Basic";
+        else if (score < 60)
+            return "Silver";
+        else if (score < 80)
+            return "Gold";
+        else
+            return "Platinum";
+    }
+
+    public void SortCitizenIds()
+    {
+        Array.Sort(citizenIds, 0, idIndex);
+        Console.WriteLine("Citizen IDs Sorted Successfully.");
+    }
+
+    public void SearchCitizenById(int id)
+    {
+        int index = Array.IndexOf(citizenIds, id, 0, idIndex);
+
+        if (index >= 0)
+            Console.WriteLine("Citizen ID Found.");
+        else
+            Console.WriteLine("Citizen ID Not Found.");
     }
 }

@@ -2,14 +2,20 @@ using System;
 
 public class Citizen
 {
+    private static int _idCounter = 1000;
+
+    public int CitizenId { get; private set; }
+
     private string _name;
     private int _age;
     private double _income;
     private int _residencyYears;
+    private int _zone;
+    private int _sector;
 
     public string Name
     {
-        get { return _name; }
+        get => _name;
         set
         {
             if (string.IsNullOrWhiteSpace(value))
@@ -20,7 +26,7 @@ public class Citizen
 
     public int Age
     {
-        get { return _age; }
+        get => _age;
         set
         {
             if (value < 0)
@@ -31,7 +37,7 @@ public class Citizen
 
     public double Income
     {
-        get { return _income; }
+        get => _income;
         set
         {
             if (value < 0)
@@ -42,7 +48,7 @@ public class Citizen
 
     public int ResidencyYears
     {
-        get { return _residencyYears; }
+        get => _residencyYears;
         set
         {
             if (value < 0)
@@ -51,20 +57,47 @@ public class Citizen
         }
     }
 
-    public Citizen(string name, int age, double income, int residencyYears)
+    public int Zone
     {
+        get => _zone;
+        set
+        {
+            if (value < 1 || value > 5)
+                throw new ArgumentException("Zone must be between 1 and 5.");
+            _zone = value;
+        }
+    }
+
+    public int Sector
+    {
+        get => _sector;
+        set
+        {
+            if (value < 1 || value > 10)
+                throw new ArgumentException("Sector must be between 1 and 10.");
+            _sector = value;
+        }
+    }
+
+    public Citizen(string name, int age, double income, int residencyYears, int zone, int sector)
+    {
+        CitizenId = ++_idCounter;
         Name = name;
         Age = age;
         Income = income;
         ResidencyYears = residencyYears;
+        Zone = zone;
+        Sector = sector;
     }
 
     public void Display()
     {
-        Console.WriteLine("\n---- Citizen Details ----");
+        Console.WriteLine("\n-----------------------------");
+        Console.WriteLine("ID: " + CitizenId);
         Console.WriteLine("Name: " + Name);
         Console.WriteLine("Age: " + Age);
         Console.WriteLine("Income: ₹" + Income);
         Console.WriteLine("Residency Years: " + ResidencyYears);
+        Console.WriteLine("Zone: " + Zone + ", Sector: " + Sector);
     }
 }
