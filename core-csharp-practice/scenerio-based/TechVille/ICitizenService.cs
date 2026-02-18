@@ -4,4 +4,8 @@ public interface ICitizenService
     void ViewCitizens();
     void SortCitizenIds();
     void SearchCitizenById(int id);
+    void SearchByName(string name);
+    void UpdateIncomeByValue(int id, double newIncome);
+    void UpdateAddressByReference(int id, ref string newAddress);
+    Citizen GenerateProfile();
 }

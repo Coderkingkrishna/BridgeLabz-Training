@@ -12,6 +12,8 @@ public class Citizen
     private int _residencyYears;
     private int _zone;
     private int _sector;
+    private string _email;
+    private string _address;
 
     public string Name
     {
@@ -20,7 +22,7 @@ public class Citizen
         {
             if (string.IsNullOrWhiteSpace(value))
                 throw new ArgumentException("Name cannot be empty.");
-            _name = value;
+            _name = ProfileUtility.FormatName(value);
         }
     }
 
@@ -79,7 +81,38 @@ public class Citizen
         }
     }
 
-    public Citizen(string name, int age, double income, int residencyYears, int zone, int sector)
+    public string Email
+    {
+        get => _email;
+        set
+        {
+            if (!ProfileUtility.IsValidEmail(value))
+                throw new ArgumentException("Invalid email format.");
+            _email = value;
+        }
+    }
+
+    public string Address
+    {
+        get => _address;
+        set
+        {
+            if (string.IsNullOrWhiteSpace(value))
+                throw new ArgumentException("Address cannot be empty.");
+            _address = value;
+        }
+    }
+
+    public Citizen(
+        string name,
+        int age,
+        double income,
+        int residencyYears,
+        int zone,
+        int sector,
+        string email,
+        string address
+    )
     {
         CitizenId = ++_idCounter;
         Name = name;
@@ -88,6 +121,8 @@ public class Citizen
         ResidencyYears = residencyYears;
         Zone = zone;
         Sector = sector;
+        Email = email;
+        Address = address;
     }
 
     public void Display()
@@ -99,5 +134,7 @@ public class Citizen
         Console.WriteLine("Income: ₹" + Income);
         Console.WriteLine("Residency Years: " + ResidencyYears);
         Console.WriteLine("Zone: " + Zone + ", Sector: " + Sector);
+        Console.WriteLine("Email: " + Email);
+        Console.WriteLine("Address: " + Address);
     }
 }

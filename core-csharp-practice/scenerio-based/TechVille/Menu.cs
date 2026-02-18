@@ -11,11 +11,15 @@ public class Menu
         do
         {
             Console.WriteLine("\n===== TechVille Service System =====");
-            Console.WriteLine("1. Register Family Members");
-            Console.WriteLine("2. View All Citizens");
+            Console.WriteLine("1. Register Family");
+            Console.WriteLine("2. View Citizens");
             Console.WriteLine("3. Sort Citizen IDs");
-            Console.WriteLine("4. Search Citizen by ID");
-            Console.WriteLine("5. Exit");
+            Console.WriteLine("4. Search by ID");
+            Console.WriteLine("5. Search by Name");
+            Console.WriteLine("6. Update Income");
+            Console.WriteLine("7. Update Address");
+            Console.WriteLine("8. Generate Profile");
+            Console.WriteLine("9. Exit");
 
             choice = InputUtility.GetInt("Enter choice: ");
 
@@ -35,18 +39,40 @@ public class Menu
                     break;
 
                 case 4:
-                    int id = InputUtility.GetInt("Enter Citizen ID: ");
+                    int id = InputUtility.GetInt("Enter ID: ");
                     service.SearchCitizenById(id);
                     break;
 
                 case 5:
-                    Console.WriteLine("Exiting system...");
+                    string name = InputUtility.GetString("Enter name: ");
+                    service.SearchByName(name);
+                    break;
+
+                case 6:
+                    int id1 = InputUtility.GetInt("Enter ID: ");
+                    double income = InputUtility.GetDouble("Enter new income: ");
+                    service.UpdateIncomeByValue(id1, income);
+                    break;
+
+                case 7:
+                    int id2 = InputUtility.GetInt("Enter ID: ");
+                    string address = InputUtility.GetString("Enter new address: ");
+                    service.UpdateAddressByReference(id2, ref address);
+                    break;
+
+                case 8:
+                    Citizen c = service.GenerateProfile();
+                    c.Display();
+                    break;
+
+                case 9:
+                    Console.WriteLine("Exiting...");
                     break;
 
                 default:
                     Console.WriteLine("Invalid choice.");
                     break;
             }
-        } while (choice != 5);
+        } while (choice != 9);
     }
 }
