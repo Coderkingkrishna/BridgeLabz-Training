@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Projects\\TechVille\\TechVille.csproj",
+      "projectUniqueName": "C:\\BridgeLabz-Training\\core-csharp-practice\\scenerio-based\\TechVille\\TechVille.csproj",
       "projectName": "TechVille",
-      "projectPath": "C:\\Projects\\TechVille\\TechVille.csproj",
+      "projectPath": "C:\\BridgeLabz-Training\\core-csharp-practice\\scenerio-based\\TechVille\\TechVille.csproj",
       "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-      "outputPath": "C:\\Projects\\TechVille\\obj\\",
+      "outputPath": "C:\\BridgeLabz-Training\\core-csharp-practice\\scenerio-based\\TechVille\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config"

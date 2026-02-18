@@ -1,6 +1,5 @@
 public interface ICitizenService
 {
-    void AddCitizen(Citizen citizen);
+    void RegisterFamily(int count);
     void ViewCitizens();
-    double CalculateEligibility(Citizen citizen);
 }

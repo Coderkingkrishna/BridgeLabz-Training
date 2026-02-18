@@ -11,55 +11,36 @@ public class Menu
 
     public void Start()
     {
-        bool exit = false;
+        int choice;
 
-        while (!exit)
+        do
         {
-            Console.WriteLine("\n===== TechVille Smart City Portal =====");
-            Console.WriteLine("1. Register Citizen");
+            Console.WriteLine("\n===== TechVille Service System =====");
+            Console.WriteLine("1. Register Family Members");
             Console.WriteLine("2. View All Citizens");
             Console.WriteLine("3. Exit");
-            Console.Write("Enter choice: ");
 
-            string choice = Console.ReadLine();
+            choice = InputUtility.GetInt("Enter choice: ");
 
             switch (choice)
             {
-                case "1":
-                    RegisterCitizen();
+                case 1:
+                    int count = InputUtility.GetInt("How many members? ");
+                    service.RegisterFamily(count);
                     break;
 
-                case "2":
+                case 2:
                     service.ViewCitizens();
                     break;
 
-                case "3":
-                    exit = true;
-                    Console.WriteLine("Exiting System...");
+                case 3:
+                    Console.WriteLine("Exiting system...");
                     break;
 
                 default:
                     Console.WriteLine("Invalid choice.");
                     break;
             }
-        }
-    }
-
-    private void RegisterCitizen()
-    {
-        try
-        {
-            string name = InputUtility.GetString("Enter Name: ");
-            int age = InputUtility.GetInt("Enter Age: ");
-            double income = InputUtility.GetDouble("Enter Income: ");
-            int residency = InputUtility.GetInt("Enter Residency Years: ");
-
-            Citizen citizen = new Citizen(name, age, income, residency);
-            service.AddCitizen(citizen);
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine("Error: " + ex.Message);
-        }
+        } while (choice != 3);
     }
 }
