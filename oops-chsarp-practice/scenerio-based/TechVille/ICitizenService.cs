@@ -10,5 +10,6 @@ public interface ICitizenService
     void ViewAvailableServices();
     void SubscribeToService();
     void ViewCitizenServices();
+    void UpgradeServiceForCitizen();
     Citizen GenerateProfile();
 }

@@ -3,6 +3,7 @@ using System;
 public class Service
 {
     private static int counter = 1;
+    public static int TotalServices { get; private set; }
 
     public int ServiceId { get; private set; }
     public string ServiceName { get; protected set; }
@@ -11,8 +12,9 @@ public class Service
     public Service(string name, double cost)
     {
         ServiceId = counter++;
-        ServiceName = name;
-        BaseCost = cost;
+        TotalServices++;
+        this.ServiceName = name;
+        this.BaseCost = cost;
     }
 
     public virtual void Display()

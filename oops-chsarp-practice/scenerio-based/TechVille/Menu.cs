@@ -22,7 +22,8 @@ public class Menu
             Console.WriteLine("9. View Services");
             Console.WriteLine("10. Subscribe to Service");
             Console.WriteLine("11. View Citizen Services");
-            Console.WriteLine("12. Exit");
+            Console.WriteLine("12. Upgrade to Premium Service");
+            Console.WriteLine("13. Exit");
             Console.WriteLine("=================================================");
 
             choice = InputUtility.GetInt("Enter your choice: ");
@@ -79,6 +80,9 @@ public class Menu
                     service.ViewCitizenServices();
                     break;
                 case 12:
+                    service.UpgradeServiceForCitizen();
+                    break;
+                case 13:
                     Console.WriteLine("Thank you for using TechVille System.");
                     break;
 
@@ -86,6 +90,6 @@ public class Menu
                     Console.WriteLine("Invalid choice. Please try again.");
                     break;
             }
-        } while (choice != 12);
+        } while (choice != 13);
     }
 }

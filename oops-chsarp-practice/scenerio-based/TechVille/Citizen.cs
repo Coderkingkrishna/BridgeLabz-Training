@@ -131,6 +131,42 @@ public class Citizen
     {
         subscribedServices.Add(service);
         Console.WriteLine(Name + " subscribed to " + service.ServiceName);
+
+        if (service is PremiumService premiumService)
+        {
+            Console.WriteLine("Premium features activated: " + premiumService.Features);
+        }
+    }
+
+    public void UpgradeToPremium(Service premiumService)
+    {
+        if (!(premiumService is PremiumService))
+        {
+            Console.WriteLine("Upgrade failed: selected service is not premium.");
+            return;
+        }
+
+        Service existing = subscribedServices.Find(s =>
+            s.ServiceName.Equals(premiumService.ServiceName, StringComparison.OrdinalIgnoreCase)
+        );
+
+        if (existing == null)
+        {
+            Console.WriteLine(
+                "No existing subscription found for " + premiumService.ServiceName + "."
+            );
+            return;
+        }
+
+        if (existing is PremiumService)
+        {
+            Console.WriteLine("Already subscribed to premium " + premiumService.ServiceName + ".");
+            return;
+        }
+
+        subscribedServices.Remove(existing);
+        subscribedServices.Add(premiumService);
+        Console.WriteLine("Upgraded to premium " + premiumService.ServiceName + ".");
     }
 
     public void ViewServices()
@@ -142,7 +178,14 @@ public class Citizen
         }
 
         foreach (var s in subscribedServices)
-            Console.WriteLine("- " + s.ServiceName + " (₹" + s.BaseCost + ")");
+        {
+            if (s is PremiumService premiumService)
+                Console.WriteLine(
+                    "- " + s.ServiceName + " Premium (₹" + premiumService.GetTotalCost() + ")"
+                );
+            else
+                Console.WriteLine("- " + s.ServiceName + " (₹" + s.BaseCost + ")");
+        }
     }
 
     public void Display()

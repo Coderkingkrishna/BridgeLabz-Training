@@ -11,10 +11,15 @@ public class CitizenService : ICitizenService
 
     public CitizenService()
     {
-        services.Add(new HealthcareService(500));
-        services.Add(new EducationService(400));
-        services.Add(new TransportationService(300));
-        services.Add(new UtilityService(250));
+        services.Add(ServiceFactory.CreateStandard(ServiceKind.Healthcare));
+        services.Add(ServiceFactory.CreateStandard(ServiceKind.Education));
+        services.Add(ServiceFactory.CreateStandard(ServiceKind.Transportation));
+        services.Add(ServiceFactory.CreateStandard(ServiceKind.Utility));
+
+        services.Add(ServiceFactory.CreatePremium(ServiceKind.Healthcare));
+        services.Add(ServiceFactory.CreatePremium(ServiceKind.Education));
+        services.Add(ServiceFactory.CreatePremium(ServiceKind.Transportation));
+        services.Add(ServiceFactory.CreatePremium(ServiceKind.Utility));
     }
 
     public void RegisterFamily(int count)
@@ -179,7 +184,13 @@ public class CitizenService : ICitizenService
         string email = ProfileUtility.GenerateEmail(name);
         string address = name + "Central City, TechVille";
 
-        return new Citizen(name, age, income, residency, zone, sector, email, address);
+        Citizen citizen = new Citizen(name, age, income, residency, zone, sector, email, address);
+
+        citizens.Add(citizen);
+        citizenIds[idIndex++] = citizen.CitizenId;
+        zoneSectorCounts[zone - 1, sector - 1]++;
+
+        return citizen;
     }
 
     public void ViewAvailableServices()
@@ -189,6 +200,8 @@ public class CitizenService : ICitizenService
             s.Display();
             Console.WriteLine("------------------");
         }
+
+        Console.WriteLine("Total services across city: " + Service.TotalServices);
     }
 
     public void SubscribeToService()
@@ -225,5 +238,37 @@ public class CitizenService : ICitizenService
         }
 
         citizen.ViewServices();
+    }
+
+    public void UpgradeServiceForCitizen()
+    {
+        Console.Write("Enter Citizen ID: ");
+        int cid = int.Parse(Console.ReadLine());
+
+        Console.Write("Enter Premium Service ID: ");
+        int sid = int.Parse(Console.ReadLine());
+
+        Citizen citizen = citizens.Find(c => c.CitizenId == cid);
+        Service service = services.Find(s => s.ServiceId == sid);
+
+        if (citizen == null)
+        {
+            Console.WriteLine("Citizen not found.");
+            return;
+        }
+
+        if (service == null)
+        {
+            Console.WriteLine("Service not found.");
+            return;
+        }
+
+        if (!(service is PremiumService))
+        {
+            Console.WriteLine("Selected service is not a premium service.");
+            return;
+        }
+
+        citizen.UpgradeToPremium(service);
     }
 }
