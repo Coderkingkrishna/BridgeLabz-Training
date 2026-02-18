@@ -14,9 +14,13 @@ public class CitizenService : ICitizenService
         {
             try
             {
-                Console.WriteLine("\nRegistering Member " + i);
+                Console.WriteLine("\n===== Registering Citizen " + i + " =====");
 
                 string name = InputUtility.GetString("Enter Name: ");
+
+                if (IsDuplicate(name))
+                    throw new DuplicateCitizenException("Citizen already exists with same name.");
+
                 int age = InputUtility.GetInt("Enter Age: ");
                 double income = InputUtility.GetDouble("Enter Income: ");
                 int residency = InputUtility.GetInt("Enter Residency Years: ");
@@ -40,64 +44,62 @@ public class CitizenService : ICitizenService
                 citizenIds[idIndex++] = citizen.CitizenId;
                 zoneSectorCounts[zone - 1, sector - 1]++;
 
-                double score = CalculateEligibility(citizen);
-                string package = DeterminePackage(score);
-
-                string status = age >= 18 ? "Adult" : "Minor";
-
-                Console.WriteLine("Status: " + status);
-                Console.WriteLine("Eligibility Score: " + score);
-                Console.WriteLine("Service Package: " + package);
+                Console.WriteLine("Citizen Registered Successfully!");
+            }
+            catch (InvalidAgeException ex)
+            {
+                Console.WriteLine("Age Error: " + ex.Message);
+                Logger.Log(ex.Message);
+            }
+            catch (DuplicateCitizenException ex)
+            {
+                Console.WriteLine("Duplicate Error: " + ex.Message);
+                Logger.Log(ex.Message);
+            }
+            catch (ArgumentException ex)
+            {
+                Console.WriteLine("Validation Error: " + ex.Message);
+                Logger.Log(ex.Message);
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error: " + ex.Message);
+                Console.WriteLine("Unexpected Error Occurred.");
+                Logger.Log(ex.Message);
+            }
+            finally
+            {
+                Console.WriteLine("Registration process completed.\n");
             }
         }
     }
 
+    private bool IsDuplicate(string name)
+    {
+        foreach (var c in citizens)
+        {
+            if (c.Name.Equals(name, StringComparison.OrdinalIgnoreCase))
+                return true;
+        }
+        return false;
+    }
+
     public void ViewCitizens()
     {
-        foreach (var citizen in citizens)
-            citizen.Display();
-    }
+        if (citizens.Count == 0)
+        {
+            Console.WriteLine("No citizens registered yet.");
+            return;
+        }
 
-    private double CalculateEligibility(Citizen citizen)
-    {
-        double score = 0;
-
-        if (citizen.Age >= 18)
-            score += (citizen.Age >= 60) ? 30 : 20;
-
-        score +=
-            (citizen.Income < 300000) ? 30
-            : (citizen.Income < 800000) ? 20
-            : 10;
-
-        score +=
-            (citizen.ResidencyYears >= 10) ? 40
-            : (citizen.ResidencyYears >= 5) ? 25
-            : 10;
-
-        return score;
-    }
-
-    private string DeterminePackage(double score)
-    {
-        if (score < 40)
-            return "Basic";
-        else if (score < 60)
-            return "Silver";
-        else if (score < 80)
-            return "Gold";
-        else
-            return "Platinum";
+        Console.WriteLine("\n===== Registered Citizens =====");
+        foreach (var c in citizens)
+            c.Display();
     }
 
     public void SortCitizenIds()
     {
         Array.Sort(citizenIds, 0, idIndex);
-        Console.WriteLine("Citizen IDs Sorted.");
+        Console.WriteLine("Citizen IDs sorted successfully.");
     }
 
     public void SearchCitizenById(int id)
@@ -108,38 +110,50 @@ public class CitizenService : ICitizenService
 
     public void SearchByName(string name)
     {
-        foreach (var citizen in citizens)
+        bool found = false;
+
+        foreach (var c in citizens)
         {
-            if (citizen.Name.ToLower().Contains(name.ToLower()))
-                citizen.Display();
+            if (c.Name.ToLower().Contains(name.ToLower()))
+            {
+                c.Display();
+                found = true;
+            }
         }
+
+        if (!found)
+            Console.WriteLine("No citizen found with that name.");
     }
 
     public void UpdateIncomeByValue(int id, double newIncome)
     {
-        foreach (var citizen in citizens)
+        foreach (var c in citizens)
         {
-            if (citizen.CitizenId == id)
+            if (c.CitizenId == id)
             {
-                double temp = newIncome; // pass by value
-                citizen.Income = temp;
-                Console.WriteLine("Income Updated.");
+                double temp = newIncome;
+                c.Income = temp;
+                Console.WriteLine("Income updated successfully.");
                 return;
             }
         }
+
+        Console.WriteLine("Citizen not found.");
     }
 
     public void UpdateAddressByReference(int id, ref string newAddress)
     {
-        foreach (var citizen in citizens)
+        foreach (var c in citizens)
         {
-            if (citizen.CitizenId == id)
+            if (c.CitizenId == id)
             {
-                citizen.Address = newAddress;
-                Console.WriteLine("Address Updated.");
+                c.Address = newAddress;
+                Console.WriteLine("Address updated successfully.");
                 return;
             }
         }
+
+        Console.WriteLine("Citizen not found.");
     }
 
     public Citizen GenerateProfile()
@@ -154,7 +168,7 @@ public class CitizenService : ICitizenService
         int sector = rand.Next(1, 11);
 
         string email = ProfileUtility.GenerateEmail(name);
-        string address = "CityCenter, TechVille";
+        string address = name + "Central City, TechVille";
 
         return new Citizen(name, age, income, residency, zone, sector, email, address);
     }

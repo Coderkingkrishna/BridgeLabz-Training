@@ -3,7 +3,6 @@ using System;
 public class Citizen
 {
     private static int _idCounter = 1000;
-
     public int CitizenId { get; private set; }
 
     private string _name;
@@ -31,8 +30,8 @@ public class Citizen
         get => _age;
         set
         {
-            if (value < 0)
-                throw new ArgumentException("Age cannot be negative.");
+            if (value < 0 || value > 120)
+                throw new InvalidAgeException("Age must be between 0 and 120.");
             _age = value;
         }
     }
@@ -127,14 +126,15 @@ public class Citizen
 
     public void Display()
     {
-        Console.WriteLine("\n-----------------------------");
-        Console.WriteLine("ID: " + CitizenId);
+        Console.WriteLine("\n---------------------------------");
+        Console.WriteLine("Citizen ID: " + CitizenId);
         Console.WriteLine("Name: " + Name);
         Console.WriteLine("Age: " + Age);
         Console.WriteLine("Income: ₹" + Income);
         Console.WriteLine("Residency Years: " + ResidencyYears);
-        Console.WriteLine("Zone: " + Zone + ", Sector: " + Sector);
+        Console.WriteLine("Zone: " + Zone + " | Sector: " + Sector);
         Console.WriteLine("Email: " + Email);
         Console.WriteLine("Address: " + Address);
+        Console.WriteLine("---------------------------------");
     }
 }
