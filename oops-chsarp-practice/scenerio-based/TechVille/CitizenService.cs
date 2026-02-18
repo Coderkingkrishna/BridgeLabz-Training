@@ -15,11 +15,13 @@ public class CitizenService : ICitizenService
         services.Add(ServiceFactory.CreateStandard(ServiceKind.Education));
         services.Add(ServiceFactory.CreateStandard(ServiceKind.Transportation));
         services.Add(ServiceFactory.CreateStandard(ServiceKind.Utility));
+        services.Add(ServiceFactory.CreateStandard(ServiceKind.Emergency));
 
         services.Add(ServiceFactory.CreatePremium(ServiceKind.Healthcare));
         services.Add(ServiceFactory.CreatePremium(ServiceKind.Education));
         services.Add(ServiceFactory.CreatePremium(ServiceKind.Transportation));
         services.Add(ServiceFactory.CreatePremium(ServiceKind.Utility));
+        services.Add(ServiceFactory.CreatePremium(ServiceKind.Emergency));
     }
 
     public void RegisterFamily(int count)
@@ -206,11 +208,8 @@ public class CitizenService : ICitizenService
 
     public void SubscribeToService()
     {
-        Console.Write("Enter Citizen ID: ");
-        int cid = int.Parse(Console.ReadLine());
-
-        Console.Write("Enter Service ID: ");
-        int sid = int.Parse(Console.ReadLine());
+        int cid = InputUtility.GetInt("Enter Citizen ID: ");
+        int sid = InputUtility.GetInt("Enter Service ID: ");
 
         Citizen citizen = citizens.Find(c => c.CitizenId == cid);
         Service service = services.Find(s => s.ServiceId == sid);
@@ -226,8 +225,7 @@ public class CitizenService : ICitizenService
 
     public void ViewCitizenServices()
     {
-        Console.Write("Enter Citizen ID: ");
-        int cid = int.Parse(Console.ReadLine());
+        int cid = InputUtility.GetInt("Enter Citizen ID: ");
 
         Citizen citizen = citizens.Find(c => c.CitizenId == cid);
 
@@ -242,11 +240,8 @@ public class CitizenService : ICitizenService
 
     public void UpgradeServiceForCitizen()
     {
-        Console.Write("Enter Citizen ID: ");
-        int cid = int.Parse(Console.ReadLine());
-
-        Console.Write("Enter Premium Service ID: ");
-        int sid = int.Parse(Console.ReadLine());
+        int cid = InputUtility.GetInt("Enter Citizen ID: ");
+        int sid = InputUtility.GetInt("Enter Premium Service ID: ");
 
         Citizen citizen = citizens.Find(c => c.CitizenId == cid);
         Service service = services.Find(s => s.ServiceId == sid);

@@ -1,6 +1,6 @@
 using System;
 
-public class PremiumService : Service
+public class PremiumService : RoutineService
 {
     public double PremiumFee { get; private set; }
     public string Features { get; private set; }

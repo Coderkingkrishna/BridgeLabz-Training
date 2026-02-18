@@ -12,8 +12,10 @@ public static class ServiceFactory
                 return new TransportationService(300);
             case ServiceKind.Utility:
                 return new UtilityService(250);
+            case ServiceKind.Emergency:
+                return new EmergencyService("Emergency Response Service", 800);
             default:
-                return new Service("General Service", 200);
+                return new RoutineService("General Service", 200);
         }
     }
 
@@ -29,6 +31,8 @@ public static class ServiceFactory
                 return new PremiumService("Transportation Service", 300, 120, "Express routes, priority seats");
             case ServiceKind.Utility:
                 return new PremiumService("Utility Service", 250, 100, "24x7 support, outage alerts");
+            case ServiceKind.Emergency:
+                return new PremiumService("Emergency Response Service", 800, 300, "Fast dispatch, critical support");
             default:
                 return new PremiumService("General Service", 200, 80, "Extended support");
         }
@@ -40,5 +44,6 @@ public enum ServiceKind
     Healthcare,
     Education,
     Transportation,
-    Utility
+    Utility,
+    Emergency
 }

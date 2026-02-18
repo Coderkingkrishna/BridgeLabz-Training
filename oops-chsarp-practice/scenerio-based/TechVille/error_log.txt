@@ -10,3 +10,7 @@ Error: Sector must be between 1 and 10.
 Date: 18/02/2026 22:19:29
 Error: Invalid email format.
 ====================================
+====================================
+Date: 18/02/2026 22:31:49
+Error: Name cannot be empty.
+====================================
