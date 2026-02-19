@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "HA3ZkFJSqxc=",
+  "dgSpecHash": "fZYBQc1f+MA=",
   "success": true,
-  "projectFilePath": "C:\\Projects\\address-book-system\\address-book-system.csproj",
+  "projectFilePath": "C:\\BridgeLabz-Training\\dbms-csharp-practice\\scenerio-based\\address-book-system\\address-book-system.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\HP\\.nuget\\packages\\azure.core\\1.50.0\\azure.core.1.50.0.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\azure.identity\\1.17.1\\azure.identity.1.17.1.nupkg.sha512",

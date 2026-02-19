@@ -1457,11 +1457,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Projects\\address-book-system\\address-book-system.csproj",
+      "projectUniqueName": "C:\\BridgeLabz-Training\\dbms-csharp-practice\\scenerio-based\\address-book-system\\address-book-system.csproj",
       "projectName": "address-book-system",
-      "projectPath": "C:\\Projects\\address-book-system\\address-book-system.csproj",
+      "projectPath": "C:\\BridgeLabz-Training\\dbms-csharp-practice\\scenerio-based\\address-book-system\\address-book-system.csproj",
       "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-      "outputPath": "C:\\Projects\\address-book-system\\obj\\",
+      "outputPath": "C:\\BridgeLabz-Training\\dbms-csharp-practice\\scenerio-based\\address-book-system\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config"
