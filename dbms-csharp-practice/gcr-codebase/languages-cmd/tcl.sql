@@ -1,0 +1,19 @@
+
+-- TRANSACTIONS
+BEGIN TRANSACTION;
+
+INSERT INTO Employees (Name, DepartmentID, Salary, Email)
+VALUES ('Eve',3,55000,'eve@mail.com');
+
+SAVE TRANSACTION SavePoint1;
+
+UPDATE Employees SET Salary = 60000 WHERE Name = 'Eve';
+
+ROLLBACK TRANSACTION SavePoint1;
+
+COMMIT;
+
+-- IMPLICIT TRANSACTION
+SET IMPLICIT_TRANSACTIONS ON;
+INSERT INTO Departments (DepartmentName) VALUES ('Support');
+COMMIT;
