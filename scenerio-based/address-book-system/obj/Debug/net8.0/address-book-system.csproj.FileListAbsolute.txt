@@ -1,0 +1,14 @@
+C:\Projects\address-book-system\obj\Debug\net8.0\address-book-system.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\address-book-system\obj\Debug\net8.0\address-book-system.AssemblyInfoInputs.cache
+C:\Projects\address-book-system\obj\Debug\net8.0\address-book-system.AssemblyInfo.cs
+C:\Projects\address-book-system\obj\Debug\net8.0\address-book-system.csproj.CoreCompileInputs.cache
+C:\Projects\address-book-system\bin\Debug\net8.0\address-book-system.exe
+C:\Projects\address-book-system\bin\Debug\net8.0\address-book-system.deps.json
+C:\Projects\address-book-system\bin\Debug\net8.0\address-book-system.runtimeconfig.json
+C:\Projects\address-book-system\bin\Debug\net8.0\address-book-system.dll
+C:\Projects\address-book-system\bin\Debug\net8.0\address-book-system.pdb
+C:\Projects\address-book-system\obj\Debug\net8.0\address-book-system.dll
+C:\Projects\address-book-system\obj\Debug\net8.0\refint\address-book-system.dll
+C:\Projects\address-book-system\obj\Debug\net8.0\address-book-system.pdb
+C:\Projects\address-book-system\obj\Debug\net8.0\address-book-system.genruntimeconfig.cache
+C:\Projects\address-book-system\obj\Debug\net8.0\ref\address-book-system.dll
